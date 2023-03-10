@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width", initial-scale="1" />
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans|Lilita+One|Saira+Stencil+One|Stardos Stencil" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title> Circle of Images Contracting </title>
+</head>
+
+<body>
+
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <!--div class="col-4 col-sm-3 col-md-2 align-self-center">
+                    <img src="img/logo.png" class="img-fluid"/>
+                </div-->
+                <div class="col offset-md-2">
+                    <h1> Circle of Images Contracting</h1>
+                    <h5>"Bringing Your Images To Reality"</h5>
+                </div>
+                    <div class="col col-sm-4 col-md-4 col-xl-2 mt-4">
+                        <a class= "btn btn-primary btn-lg text-nowrap" id="estimateButton">Request Estimate </a>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="estimateModal" class="modal fade" role="dialog"><!-- start of estimate modal-->
+        <div class="modal-lg modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Request Free Estimate </h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form id="estimateForm">
+                            <div class="form-group row">
+                                <label for="firstName" class="col-md-2 col-form-label"> First Name</label> 
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="lastName" class="col-md-2 col-form-label"> Last Name</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="workType" class="col-md-2 col-form-label"> Type of Work</label>
+                                <div class="col-md-10">
+                                    <select name="workType" id="workType" class="form-control">
+                                        <option selected> Select... </option>
+                                        <option value="windows"> Window(s) Replacement </option>
+                                        <option value="doors"> Door(s) Replacement</option>
+                                        <option value="kitchen"> Kitchen Remodleing </option>
+                                        <option value="bathroom"> Bathroom Remodeling</option>
+                                        <option value="addition"> Addition </option>
+                                        <option value="bar"> Home Bar </option>
+                                        <option value="siding"> Siding </option>
+                                        <option value="excavating">Excavating </option>
+                                        <option value="snowPlowing"> Snow Plowing </option> 
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for= "areaCode" class="col-md-2 col-form-label"> Contact Tel.</label>
+                                <div class="col-5 col-md-3">
+                                    <input type="tel" class="form-control" id="areaCode" name="areaCode" placeholder="Area code" />
+                                </div>
+                                <div class="col-7">
+                                    <input type="tel" class="form-control" name="telNum" placeholder="Tel. number" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="col-md-2 col-form-label">Email</label> 
+                                <div class="col-md-10">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email"/>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="date" class="col-sm-6 col-form-label"> Preferred Estimate Date </label>
+                                    <div class="col-sm-6">
+                                        <input type="date" id="date" name="date" placeholder="date" class="form-control" />
+                                    </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="cancel" class="btn btn-secondary" data-dismiss="modal"> Cancel </button>
+                                    <button type="submit" href="mailto:bdoupe@ymail.com" class="btn btn-primary"> Send </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end of estimate modal-->
+
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container">
+            <!--a class="navbar-brand" href="#"> <img src="img/logo.PNG" height="30" width="50" /> </a-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#circleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="circleNavbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg mr-1"></i>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="ml-4 fa fa-info fa-lg mr-1"></i>About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="ml-4 fa fa-wrench fa-lg mr-1"></i> Services </a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html"><i class="ml-4 fa fa-list fa-lg mr-1"></i> Reviews </a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html"><i class="ml-4 fa fa-camera fa-lg mr-1"></i> Portfolio </a></li>
+                    <!--li class="nav-item"><a class="nav-link" href="contactus.html"><i class="ml-4 fa fa-address-card fa-lg mr-1"></i>Contact</a></li-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row row-content align-items-center" id="accordion">
+            <div class="col">
+                <div class="gallery-wrap">
+                    <div class="item item-1"> 
+                        <div class="item-1-caption">
+                            <h3> Windows </h3>
+                            <p class="d-lg-none"> Professionally installed! Save on heat loss!!</p>
+                            <p class="d-none d-lg-block"> Professionally installed windows that look great and save you money! </p>
+                        </div>
+                    </div>
+                    <div class="item item-2">
+                        <div class="item-2-caption">
+                            <h3> Doors </h3>
+                            <p class="d-lg-none"> The welcoming touch your home deserves!</p>
+                            <p class="d-none d-lg-block"> From the welcome mat to the bathroom doors, Circle of Images will do all interior and exterior doors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-content align-items-center" id="accordion2">
+            <div class="col">
+                <div class="gallery-wrap">
+                    <div class="item item-3"> 
+                        <div class="item-3-caption">
+                            <h3> Kitchens </h3>
+                            <p class="d-lg-none"> The kitchen you always dreamed of having!</p>
+                            <p class="d-none d-lg-block"> Get your dream kitchen! New cabinets, countertops, flooring, appliances, you name it! </p>
+                        </div>
+                    </div>
+                    <div class="item item-4">
+                        <div class="item-4-caption">
+                            <h3> Additions </h3>
+                            <p class="d-lg-none"> Adding the extra space you always needed.</p>
+                            <p class="d-none d-lg-block"> Let Circle of Images build the addition to fit all of your lively needs! </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-content align-items-center" id="accordion3">
+            <div class="col">
+                <div class="gallery-wrap">
+                    <div class="item item-5"> 
+                        <div class="item-5-caption">
+                            <h3> Home Bars </h3>
+                            <p class="d-lg-none"> It's five o'clock somewhere! </p>
+                            <p class="d-none d-lg-block"> The perfect addition to any man/woman cave! Drinks up! </p>
+                        </div>
+                    </div>
+                    <div class="item item-6">
+                        <div class="item-6-caption">
+                            <h3> Siding </h3>
+                            <p class="d-lg-none"> Bring your house to life with a new look.</p>
+                            <p class="d-none d-lg-block"> It's amazing how much character siding gives a house. Change you home's look today!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-content align-items-center" id="accordion4">
+            <div class="col">
+                <div class="gallery-wrap">
+                    <div class="item item-7"> 
+                        <div class="item-7-caption">
+                            <h3> Bathrooms </h3>
+                            <p class="d-lg-none"> Complete remodels to leaky faucets.</p>
+                            <p class="d-none d-lg-block"> Change your bathroom from a complete remoodel to fixing that leaky faucet. </p>
+                        </div>
+                    </div>
+                    <div class="item item-8">
+                        <div class="item-8-caption">
+                            <h3> Excavating </h3>
+                            <p class="d-lg-none"> Freench drains, wells, septics, oh my!</p>
+                            <p class="d-none d-lg-block"> Rehsape your lawn with a new French drain or just get some help with digging out your septic or well. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <!--div class="col-4 col-sm-2 offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="#">Sites</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-5 text-center">
+                    <h5>Social</h5>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                </div-->
+                <div class="col-sm-6 text-center">
+                    <a role="button" class="btn btn-link" href="tel:+13156952462"><i class="fa fa-phone"></i> 315-695-2462</a><br>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <a role="button" class="btn btn-link" href="mailto:bdoupe@ymail.com"><i class="fa fa-envelope-o"></i> bdoupe@ymail.com
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <!-- build:js js/main.js-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild--> 
+
+</body>
+
+</html>
